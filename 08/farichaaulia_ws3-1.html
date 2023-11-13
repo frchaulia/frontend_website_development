@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>Worksheet 3.1 My Calculator Faricha Aulia</tittle>
+        <!--Latest compiled and minified CSS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+        
+        <!--Latest compiled Javascript-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <section class="container">
+            <header class="bg-info">
+                <h2>My Calculator v1.0001</h2>
+            </header>
+            <article>
+                <!--Button to Open the Modal-->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Open Calculator
+                </button>
+
+                <!--The Modal-->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!--Modal Header-->
+                            <div class="modal-header">
+                                <h4 class="modal-tittle"> Calculator v1.0001 Faricha Aulia</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!--Modal Body-->
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="fnum">Enter first number</label>
+                                            <input type="number" class="form-control" placeholder="Enter first number" name="fnum" id="fnum" value="0"> </input>
+                                        </div>
+                                        <div class="col">
+                                            <label for="fnum">Enter second number</label>
+                                            <input type="number" class="form-control" placeholder="Enter second number" name="snum" id="snum" value="0"> </input>
+                                        </div>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>Result: <label id="result"></label></p>
+                                        </div>
+                                    </div><br>
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success" onclick="sum()">Sum</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success" onclick="">Difference</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success" onclick="">Product</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-success" onclick="">Quotient</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!--Modal footer-->
+                            <div class="modal-footer"> 
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+
+        <script type="text/javascript">
+
+            function sum(){
+                let fnum=document.getElementById("fnum").value;
+                var snum=document.getElementById("snum").value;
+                document.getElementById("result").innerHTML = parseInt(fnum) + parseInt(snum);
+            }
+
+        </script>
+
+
+    </body>
+</html>
