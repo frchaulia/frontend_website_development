@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Worksheet 3.2 Login Faricha Aulia</title>
+        <script type="text/javascript">
+        var login_attempts=3;
+        function check_form()
+        {
+            var name=document.getElementById("name").value;
+            var pass=document.getElementById("pass").value;
+            if(name=="auliacode" && pass=="farichaaulia")
+            {
+                alert("You have successfully logged in");
+                document.getElementById("name").value="";
+                document.getElementById("pass").value="";
+            }else{
+                if(login_attempts==0){
+                    alert("Sorry, no log in attempts are available. <br> Please fill in the available login form first");
+                } else {
+                    login_attempts=login_attempts-1;
+                    alert("Login failed, "+login_attempts+" login attempts available");
+                        if(login_attempts==0) {
+                            document.getElementById("name").disabled=true;
+                            document.getElementById("pass").disabled=true;
+                            document.getElementById("form1").disabled=true;
+                        }
+                }
+            }
+            return false;
+        }	
+        </script>
+
+        <style>
+        body{
+            background-image: url(bg1.jpg);
+        }
+        .icons ion-icon{
+            color: #62cca2;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.3s ease;
+        }
+        .icons ion-icon:hover{
+            color: #4aa5e2;
+        }
+
+        body{
+            text-align:center;
+            width:100%;
+            margin:0 auto;
+            padding:0px;
+            font-family:helvetica;
+        }
+
+        #wrapper{
+            text-align:center;
+            margin:0 auto;
+            padding:0px;
+            width:995px;
+        }
+
+        #form1{
+            background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+            position: absolute;
+            width:330px;
+            margin-left:305px;
+            top:250px;
+            box-shadow:0px 0px 10px 0px #D8D8D8;
+            transform: translate(0%,-5%);
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        #form1 p{
+            font-family: sans-serif;
+            text-align: center;
+            color:#fff;
+            font-size: 12px;
+        }
+
+        #form1 a{
+            color:#4ae2da;
+            font-weight:bold;
+        }
+
+        #form1 #login_label{
+            font-size:25px;
+            border-bottom:1px solid #E6E6E6;
+            font-weight:bold;
+            width: 310px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #62cca2;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow:0px 3px 0px 0px #479978;
+        }
+
+        #form1 input[type="text"],input[type="password"]{
+            width:275px;
+            height:40px;
+            padding-left:10px;
+            margin-top:10px;
+            border:1px solid #a3fdd9;
+            background-color: #e6fdf4;
+        }
+
+        #form1 input[type="submit"]{
+            margin-top:10px;
+            width:290px;
+            height:40px;
+            background-color:#62cca2;
+            border:none;
+            color:white;
+            box-shadow:0px 3px 0px 0px #479978;
+            border-radius:3px;
+            font-weight:bold;
+        }
+
+        #form1 input[type="submit"]:hover{
+            background: #fff;
+            color: #62cca2;
+        }
+        
+        </style>
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+            <form id="form1" method="post" action="" onsubmit="return check_form();">
+                <p id="login_label">USER LOGIN</p>
+                <input type="text" id="name" placeholder="Enter Username Here">
+                <br>
+                <input type="password" id="pass" placeholder="Enter Password Here">
+                <br>
+                <input type="submit" value="LOGIN">
+                <p></p>
+                <br>
+                <p>Don't have an account? <br> Log in with</p>
+
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+                <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+            </form>
+        </div>
+
+    </body>
+
+</html>
