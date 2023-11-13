@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Worksheet 2.2 Hover and Striped Faricha Aulia</title>
+    <style>
+        h1{
+            color:darkolivegreen;
+            font-family:'Franklin Gothic Medium';
+            font-size:36px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0;
+            color: #212121;
+            text-align: left;
+            overflow: hidden;
+            font-family: arial, sans-serif;
+        }
+
+        table>tbody>tr>td {
+            padding: 10px;
+            font-size: 14px;
+            position: relative;
+        }
+
+        table > tbody > tr:hover {
+            padding: 20px;
+            background-color: rgb(212, 209, 209) 
+            !important;
+        }
+
+        tr:nth-of-type(even) {
+            background-color: #f0f0f0;
+        }
+        
+        th{
+            background-color: #4b5320; 
+            color:white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        tr:nth-child(even) td:first-child::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -5000px;
+            width: 10000px;
+            height: 100%;
+            z-index: -10;
+        }
+
+        td:hover::after {
+            content: "";
+            position: absolute;
+            background-color: rgb(212, 209, 209);;
+            left: 0;
+            top: -5000px;
+            height: 10000px;
+            width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Hover and Striped Rows</h1></center>
+    <br>
+    <table>
+        <thead>
+            <th><h3>Firstname</h3></th>
+            <th><h3>Lastname</h3></th>
+            <th><h3>Email</h3></th>
+        </thead>
+        <tr>
+            <td>Alfred</td>
+            <td>Pratama</td>
+            <td>albfrtm20@example.com</td>
+        </tr>
+        <tr>
+            <td>Rizky</td>
+            <td>Kurniawan</td>
+            <td>kurkurizky21@example.com</td>
+        </tr>
+        <tr>
+            <td>Bella</td>
+            <td>Safitri</td>
+            <td>bebellac10@example.com</td>
+        </tr>
+        <tr>
+            <td>David</td>
+            <td>Ramadhani</td>
+            <td>vidhani66@example.com</td>
+        </tr>
+        <tr>
+            <td>Riko</td>
+            <td>Anugerah</td>
+            <td>ikonueraa45@example.com</td>
+        </tr>
+        <tr>
+            <td>Vino</td>
+            <td>Leviansyah</td>
+            <td>pinogres78@example.com</td>
+        </tr>
+        <tr>
+            <td>Satria</td>
+            <td>Anjasmara</td>
+            <td>bajahitam09@example.com</td>
+        </tr>
+        <tr>
+            <td>Tiara</td>
+            <td>Maurent</td>
+            <td>tiaramaur560@example.com</td>
+        </tr>
+        <tr>
+            <td>Andin</td>
+            <td>Syahfitri</td>
+            <td>niandinidip90@example.com</td>
+        </tr>
+        <tr>
+            <td>Radita</td>
+            <td>Ramadhani</td>
+            <td>ditaramah22@example.com</td>
+        </tr>
+    </table>
+</body>
+</html>
